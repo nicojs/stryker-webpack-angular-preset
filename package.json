@@ -1,0 +1,71 @@
+{
+  "private": true,
+  "name": "stryker-webpack-angular-preset",
+  "version": "0.0.1",
+  "description": "A preset for Angular projects for the stryker-webpack package.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "premocha": "npm run build",
+    "test": "npm run mocha && npm run stryker",
+    "mocha": "nyc --reporter=html --report-dir=reports/coverage --check-coverage --lines 85 --functions 90 --branches 65 mocha \"test/unit/**/*.js\" \"test/integration/**/*.js\"",
+    "stryker": "stryker run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Archcry/stryker-webpack-angular-preset"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "stryker",
+    "stryker-plugin",
+    "typescript",
+    "webpack",
+    "stryker-transpiler"
+  ],
+  "author": "Sander koenders <sanderkoenders@gmail.com>",
+  "contributors": [
+    "Simon de Lang <simondelang@gmail.com>",
+    "Nico Jansen <jansennico@gmail.com>"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Archcry/stryker-webpack-angular-preset/issues"
+  },
+  "homepage": "https://github.com/Archcry/stryker-webpack-angular-preset#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "@types/sinon": "^2.3.6",
+    "@types/webpack": "^3.0.13",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "sinon": "^4.0.1",
+    "stryker": "^0.13.0",
+    "stryker-cli": "^0.1.3",
+    "stryker-html-reporter": "^0.11.0",
+    "stryker-mocha-framework": "^0.6.1",
+    "stryker-mocha-runner": "^0.9.1",
+    "stryker-typescript": "^0.8.0",
+    "stryker-webpack": "^0.0.2",
+    "typescript": "^2.5.0",
+    "stryker-api": "^0.11.0",
+    "webpack": "^3.7.1"
+  },
+  "peerDependencies": {
+    "stryker-api": "^0.11.0",
+    "webpack": "^3.7.1",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.4.1",
+    "css-loader": "^0.28.7",
+    "html-loader": "^0.5.1",
+    "null-loader": "^0.1.1",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.19.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.16"
+  }
+}
