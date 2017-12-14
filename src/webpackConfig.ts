@@ -1,13 +1,15 @@
 import * as path from 'path';
 import { ContextReplacementPlugin, Configuration } from 'webpack';
 
+// Ignore webpack configuration, 
+/* istanbul ignore next */
 export default (projectRoot: string): Configuration => {
   const config = {
     entry: {
-      polyfills: path.join(projectRoot, "src", "polyfills.ts"),
-      vendor: path.join(projectRoot, "stryker", "vendor.ts"),
-      app: path.join(projectRoot, "src", "polyfills"),
-      test: path.join(projectRoot, "stryker", "karma-test-shim.js")
+      polyfills: path.join(projectRoot, 'src', 'polyfills.ts'),
+      vendor: path.join(projectRoot, '.stryker-tmp', 'stryker-webpack-angular-preset', 'vendor.ts'),
+      app: path.join(projectRoot, 'src', 'polyfills'),
+      test: path.join(projectRoot, '.stryker-tmp', 'stryker-webpack-angular-preset', 'karma-test-shim.js')
     },
 
     resolve: {
@@ -15,7 +17,7 @@ export default (projectRoot: string): Configuration => {
     },
 
     output: {
-      path: path.join(projectRoot, "out"),
+      path: path.join(projectRoot, 'out'),
       filename: '[name].bundle.js',
       chunkFilename: '[id].chunk.js'
     },
