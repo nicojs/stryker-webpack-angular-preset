@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "stryker-webpack-angular-preset",
   "version": "0.0.0",
   "description": "A preset for Angular projects for the stryker-webpack package.",
