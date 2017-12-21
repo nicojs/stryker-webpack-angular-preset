@@ -49,7 +49,7 @@
     "stryker-mocha-framework": "^0.6.1",
     "stryker-mocha-runner": "^0.9.1",
     "stryker-typescript": "^0.8.0",
-    "stryker-webpack": "^0.0.2",
+    "stryker-webpack": "^0.1.0",
     "typescript": "^2.5.0",
     "stryker-api": "^0.11.0",
     "webpack": "^3.7.1"
